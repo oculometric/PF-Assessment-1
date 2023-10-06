@@ -10,10 +10,13 @@ void main()
 
     int length = text.length();
 
-    for (int i = 0; i < length + 4; i++)
-        cout << "*";
+    // first line of stars
+    for (int i = 0; i < length + 4; i++) cout << "*";
     cout << endl;
+
+    // text
     cout << "* " << text << " *" << endl;
-    for (int i = 0; i < length + 4; i++)
-        cout << "*";
+
+    // second line of stars
+    for (int i = 0; i < length + 4; i++) cout << "*";
 }

@@ -6,12 +6,14 @@ using namespace std;
 
 void main()
 {
+    // pick the number
     int target_number = random(1, 100);
 
     int num_guesses = 0;
 
     while (true)
     {
+        // get input from user
         num_guesses++;
         string str_guess;
         cout << "enter a guess: ";
@@ -21,6 +23,7 @@ void main()
         if (user_guess == target_number) break;
         else
         {
+            // respond based on how far away the user is
             int difference = abs(user_guess - target_number);
             if (difference >= 50) cout << "freezing";
             else if (difference >= 35) cout << "colder";
@@ -34,6 +37,7 @@ void main()
         }
     }
 
+    // tell the player they won
     cout << "you got it! the number was " << target_number << endl;
     cout << "it took you " << num_guesses << " guesses" << endl;
 }

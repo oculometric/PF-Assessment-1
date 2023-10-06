@@ -6,6 +6,7 @@ using namespace std;
 
 void main()
 {
+    // get user input
     float xComponents[2] = { 0.0f, 0.0f };
     float yComponents[2] = { 0.0f, 0.0f };
 
@@ -20,9 +21,11 @@ void main()
         cout << std::endl;
     }
 
+    // construct these values into Vector2s
     Vector2 v_a = Vector2(xComponents[0], yComponents[0]);
     Vector2 v_b = Vector2(xComponents[1], yComponents[1]);
 
+    // output the distance between them
     cout << "The distance between " << v_a << " and " << v_b << " is " << GetDistanceBetweenPoints(v_a, v_b) << endl;
     
 }

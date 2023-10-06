@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// capitalise the next text character of a sentence after a sentence end
 string sentence_caps(string str)
 {
 	string output;
@@ -12,12 +13,16 @@ string sentence_caps(string str)
 	{
 		if (capitalise_next && c != ' ')
 		{
+			// capitalise this character, clear flag
 			output += toupper(c);
 			capitalise_next = false;
 		}
 		else
 		{
+			// decapitalise this character
 			output += tolower(c);
+
+			// if at the end of a sentence, set capitalise flag
 			if (c == '.' || c == '!' || c == '?') capitalise_next = true;
 		}
 	}
@@ -25,6 +30,7 @@ string sentence_caps(string str)
 	return output;
 }
 
+// capitalise whole string, char by char
 string all_upper(string str)
 {
 	string output;
@@ -35,6 +41,7 @@ string all_upper(string str)
 	return output;
 }
 
+// decapitalise whole string, char by char
 string all_lower(string str)
 {
 	string output;
