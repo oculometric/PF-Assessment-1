@@ -52,11 +52,22 @@ string all_lower(string str)
 	return output;
 }
 
+bool has_alphabetical_chars(string text)
+{
+	for (char c : text)
+	{
+		if ((c >= 'A' && c <= 'Z') || (c >= 'a' && <= 'z')) return true;
+	}
+	return false;
+}
+
 void main()
 {
 	cout << "enter some text: ";
 	string text;
 	getline(cin, text);
+
+	if (!has_alphabetical_chars(text)) cout << "No alphabetical characters found. Continuing anyway..." << endl;
 
 	cout << "Sentence case: " << sentence_caps(text) << endl;
 	cout << "Lower case: " << all_lower(text) << endl;

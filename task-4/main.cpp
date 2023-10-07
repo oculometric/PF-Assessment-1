@@ -2,21 +2,35 @@
 
 using namespace std;
 
+void boxify_text(string text, int padding)
+{
+    int length = text.length() + 2 + (2 * padding);
+
+    // first line of stars
+    for (int i = 0; i < length; i++) cout << "*";
+    cout << endl;
+
+    // text
+    cout << "*";
+    for (int i = 0; i < padding; i++) cout << " ";
+    cout << text;
+    for (int i = 0; i < padding; i++) cout << " ";
+    cout << "*" << endl;
+
+    // second line of stars
+    for (int i = 0; i < length; i++) cout << "*";
+}
+
 void main()
 {
     string text;
     cout << "enter some text: ";
     cin >> text;
 
-    int length = text.length();
+    int padding;
+    cout << "how much padding? ";
+    cin >> padding;
 
-    // first line of stars
-    for (int i = 0; i < length + 4; i++) cout << "*";
-    cout << endl;
-
-    // text
-    cout << "* " << text << " *" << endl;
-
-    // second line of stars
-    for (int i = 0; i < length + 4; i++) cout << "*";
+    boxify_text(text, padding);
+    
 }
