@@ -31,8 +31,7 @@ void main()
             else if (difference >= 15) cout << "warm";
             else if (difference >= 10) cout << "warmer";
             else if (difference >= 5) cout << "hot";
-            else if (difference >= 2) cout << "boiling";
-            else cout << "super duper boiling";
+            else cout << "boiling";
             cout << endl;
         }
     }
