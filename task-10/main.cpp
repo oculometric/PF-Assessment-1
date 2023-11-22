@@ -82,14 +82,14 @@ int get_integer_input_from_user(string prompt, int min, int max)
 /*
 * Returns a CRG band based on the percentage mark provided
 */
-int get_band(float percentage)
+string get_band(float percentage)
 {
-    if (percentage < 30) return 0;
-    if (percentage < 40) return 1;
-    if (percentage < 50) return 2;
-    if (percentage < 60) return 3;
-    if (percentage < 70) return 4;
-    return 5;
+    if (percentage < 30) return "Fail";
+    if (percentage < 40) return "Fail";
+    if (percentage < 50) return "Pass";
+    if (percentage < 60) return "2-2";
+    if (percentage < 70) return "2-1";
+    return "1-1";
 }
 
 void main()
