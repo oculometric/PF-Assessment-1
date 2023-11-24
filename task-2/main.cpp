@@ -11,20 +11,27 @@ void main()
     int age;
 
     cout << "please enter your name: ";
-    cin >> name;
-
+    getline(cin, name);
     cout << "hello, " << name << "!" << endl;
 
     cout << "please enter your clan tag: ";
-    cin >> clan_tag;
+    getline(cin, clan_tag);
 
     cout << "please enter your username: ";
-    cin >> username;
+    getline(cin, username);
 
-    cout << "please enter your age: ";
-    string age_str;
-    cin >> age_str;
-    age = stoi(age_str);
+    while (true)
+    {
+        cout << "please enter your age: ";
+        string age_str;
+        cin >> age_str;
+        try
+        {
+            age = stoi(age_str);
+            break;
+        }
+        catch (exception e) {}
+    }
 
     cout << "player details:" << endl;
     cout << "-------------------------------------------------" << endl;

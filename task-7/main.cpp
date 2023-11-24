@@ -36,7 +36,11 @@ void main()
 
         string str;
         cin >> str;
-        character_class_index = stoi(str)-1;
+        try
+        {
+            character_class_index = stoi(str) - 1;
+        }
+        catch (exception e) { continue; }
 
         if (character_class_index >= character_classes.size() || character_class_index < 0)
         {

@@ -56,7 +56,7 @@ bool has_alphabetical_chars(string text)
 {
 	for (char c : text)
 	{
-		if ((c >= 'A' && c <= 'Z') || (c >= 'a' && <= 'z')) return true;
+		if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) return true;
 	}
 	return false;
 }

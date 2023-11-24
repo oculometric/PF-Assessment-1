@@ -17,9 +17,14 @@ void main()
         num_guesses++;
         string str_guess;
         cout << "enter a guess: ";
-        cin >> str_guess;
-        int user_guess = stoi(str_guess);
-        
+        getline(cin, str_guess);
+        int user_guess;
+        try
+        {
+            user_guess = stoi(str_guess);
+        }
+        catch (exception e) { continue;  }
+
         if (user_guess == target_number) break;
         else
         {

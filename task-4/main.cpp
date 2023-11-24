@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ void main()
 {
     string text;
     cout << "enter some text: ";
-    cin >> text;
+    getline(cin, text);
 
     int padding;
     cout << "how much padding? ";

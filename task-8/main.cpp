@@ -154,7 +154,13 @@ void main()
             }
 
             // try to get the argument as an int, try again if it isn't valid
-            int slot_to_view = stoi(split_command[1]);
+            int slot_to_view = -1;
+            try
+            {
+                slot_to_view = stoi(split_command[1]);
+            }
+            catch (exception e) {}
+
             if (slot_to_view < 0)
             {
                 cout << "Slot to view must be an index in the inventory." << endl << endl;
@@ -192,13 +198,23 @@ void main()
             }
 
             // try to get the slot and item ids, try again if invalid
-            int slot_to_set = stoi(split_command[1]);
+            int slot_to_set = -1;
+            try
+            {
+                slot_to_set = stoi(split_command[1]);
+            }
+            catch (exception e) {}
             if (slot_to_set < 0)
             {
                 cout << "Slot to set must be an index in the inventory." << endl << endl;
                 continue;
             }
-            int item_id = stoi(split_command[2]);
+            int item_id = -1;
+            try
+            {
+                item_id = stoi(split_command[2]);
+            }
+            catch (exception e) {}
             if (item_id < 0 || item_id >= item_descriptions.size())
             {
                 cout << "Item ID must be within the list of valid item IDs." << endl << endl;
